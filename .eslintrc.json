@@ -43,6 +43,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "linebreak-style": ["error", "windows"]
   }
 }
