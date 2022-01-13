@@ -2,7 +2,7 @@ import React from 'react';
 
 type FormContainerProps = {
   children: React.ReactNode
-}
+};
 
 const FormContainer = ({ children }: FormContainerProps) => {
   return (
