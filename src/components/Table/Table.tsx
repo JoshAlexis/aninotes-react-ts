@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 type TableProps = {
   children: ReactNode
-}
+};
 
 const Table = ({ children }: TableProps) => {
   return (

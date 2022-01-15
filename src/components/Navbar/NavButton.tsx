@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 type NavButtonProps = {
   title: string,
   to: string
-}
+};
 
 const NavButton = ({ title, to }: NavButtonProps) => {
   return (

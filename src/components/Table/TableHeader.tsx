@@ -3,7 +3,7 @@ import { CogIcon } from '@heroicons/react/solid';
 type TableHeaderProps = {
   headers: string[],
   actions?: boolean
-}
+};
 
 const TableHeader = ({ headers, actions }: TableHeaderProps) => {
   return (
