@@ -4,7 +4,7 @@ import React, { FormEvent } from 'react';
 type FormProps = {
   children: React.ReactNode,
   onSubmit: (e: FormEvent<HTMLFormElement>) => void
-}
+};
 
 const Form = ({ children, onSubmit }: FormProps) => {
   return (

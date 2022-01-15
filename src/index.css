@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-gradient-to-r from-blue-600 to-green-500 w-full h-screen;
+}
+.table {
+  border-spacing: 0 10px;
+}
+.table tr {
+  border-radius: 20px;
+}
+tr td:nth-child(1),
+tr th:nth-child(1) {
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+tr td:last-child,
+tr th:last-child {
+  border-radius: 0 0.625rem 0.625rem 0;
+}
