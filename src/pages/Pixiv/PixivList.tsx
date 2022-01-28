@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 /* eslint-disable  import/extensions */
 import {
   Table,
@@ -7,32 +7,21 @@ import {
   TableRow,
   TableCell,
 } from '../../components/Table';
-import { getPixivItems } from '../../services/PixivService';
-import Pixiv from '../../types/Pixiv';
+import PixivService from '../../services/PixivService';
 import { pixivHeaders } from './data';
 
 const PixivList = () => {
-  const [pixivItems, setPixivItems] = useState<Pixiv[]>([]);
-
-  const fetchItems = async () => {
-    try {
-      const response = await getPixivItems();
-      setPixivItems(response);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchItems();
-  }, []);
+  const { data } = useQuery("pixivitems", async () => {
+    const data = await PixivService.getPixivItems();
+    return data
+  })
 
   return (
     <Table>
       <TableHeader headers={pixivHeaders} actions />
       <TableBody>
         {
-          pixivItems?.map((pixiv) => {
+          data?.map((pixiv) => {
             return (
               <TableRow key={pixiv.idPixiv}>
                 <TableCell>{pixiv.idPixiv}</TableCell>
