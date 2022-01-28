@@ -8,11 +8,9 @@ type FormProps = {
 
 const Form = ({ children, onSubmit }: FormProps) => {
   return (
-    <div className="md:w-2/3 flex flex-col justify-start items-center">
-      <form onSubmit={onSubmit}>
-        {children}
-      </form>
-    </div>
+    <form onSubmit={onSubmit} className="w-3/5 flex flex-col justify-start items-center">
+      {children}
+    </form>
   );
 };
 
