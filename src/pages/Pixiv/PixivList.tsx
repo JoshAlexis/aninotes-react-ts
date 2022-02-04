@@ -1,4 +1,6 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+import PixivServices from 'src/services/PixivService';
 /* eslint-disable  import/extensions */
 import {
   Table,
@@ -7,15 +9,17 @@ import {
   TableRow,
   TableCell,
 } from '../../components/Table';
-import { pixivItems, pixivHeaders } from './data';
+import { pixivHeaders } from './data';
 
 const PixivList = () => {
+  const { data: pixivItems } = useQuery('pixivItems', PixivServices.getItems);
+
   return (
     <Table>
       <TableHeader headers={pixivHeaders} actions />
       <TableBody>
         {
-          pixivItems.map((pixiv) => {
+          pixivItems?.data?.map((pixiv) => {
             return (
               <TableRow key={pixiv.idPixiv}>
                 <TableCell>{pixiv.idPixiv}</TableCell>

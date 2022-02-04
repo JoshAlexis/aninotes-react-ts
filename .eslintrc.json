@@ -38,7 +38,7 @@
     "react/require-default-props": "off",
     "import/extensions": [
       "error",
-      "ignorePackages",
+      "never",
       {
         "js": "never",
         "jsx": "never",
@@ -46,6 +46,7 @@
         "tsx": "never"
       }
     ],
-    "linebreak-style": ["error", "windows"]
+    "linebreak-style": ["error", "windows"],
+    "class-methods-use-this": "warn"
   }
 }

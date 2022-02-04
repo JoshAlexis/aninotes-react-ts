@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import PixivHome from './PixivHome';
+import PixivHome from '../pages/Pixiv/PixivHome';
 
 const PixivRoutes = () => {
   return (
