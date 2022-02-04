@@ -1,3 +1,3 @@
 export interface Service<T> {
-  getItems(): Promise<T>
+  getItems(params?: unknown): Promise<T>
 }

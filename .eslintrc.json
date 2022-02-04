@@ -47,6 +47,6 @@
       }
     ],
     "linebreak-style": ["error", "windows"],
-    "class-methods-use-this": "warn"
+    "class-methods-use-this": "off"
   }
 }

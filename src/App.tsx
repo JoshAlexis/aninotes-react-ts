@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClientProvider, QueryClient } from 'react-query';
-// import { ReactQueryDevtools } from 'react-query/devtools';
-import './index.css';
 import HomePage from './pages/HomePage';
 import NotFound from './pages/NotFound';
 import PixivRoutes from './routes/PixivRoutes';
+import './index.css';
 
 const queryClient = new QueryClient();
 
