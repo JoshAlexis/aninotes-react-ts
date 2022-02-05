@@ -18,7 +18,7 @@ export interface Link {
   size: 10;
 }
 
-export interface FetchParams {
+export type GetParams = {
   limit: number;
   page: number;
-}
+};
